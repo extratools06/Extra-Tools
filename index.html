@@ -3,33 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Remove image backgrounds instantly with Remove Easy. Free online tool with high-quality background removal in seconds.">
-    <meta name="keywords" content="remove background, transparent background, image editor, free background remover, online photo editor">
-    <meta name="author" content="Remove Easy">
-    <meta property="og:title" content="Remove Easy | Free Online Background Remover">
-    <meta property="og:description" content="Remove backgrounds from images automatically in 5 seconds with our free online tool.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourusername.github.io/remove-easy">
-    <meta name="theme-color" content="#FD1D1D">
-    <title>Remove Easy | Free Online Background Remover</title>
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- Ad Scripts -->
-    <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
-    <script async="async" data-cfasync="false" src="//pl26716660.profitableratecpm.com/1bd921e4eac7061b2dca891f7d6ed179/invoke.js"></script>
-    <script type='text/javascript' src='//pl26716656.profitableratecpm.com/a4/f5/09/a4f5094874337c2c6ef04ce168dbcc0f.js'></script>
-    
+    <meta name="description" content="Free online tools - URL Shortener and Background Remover. Simple, fast, and easy to use.">
+    <meta name="keywords" content="URL shortener, background remover, free online tools, AI tools">
+    <meta name="author" content="Your Name">
+    <title>AI Tools - URL Shortener & Background Remover</title>
+    <!-- Popunder Ad Script -->
+    <script type='text/javascript' src='//pl26738193.profitableratecpm.com/14/73/ea/1473eaf8f925b2bd8f230efc9e259fd6.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FD1D1D;
-            --secondary: #833AB4;
-            --tertiary: #405DE6;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --gray: #6c757d;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --gradient-start: #00b09b;
+            --gradient-mid: #00b09b;
+            --gradient-end: #96c93d;
+            --gradient-blue: #1fa2ff;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
 
@@ -37,1255 +29,504 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--light);
-            color: var(--dark);
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         header {
-            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
-            color: white;
-            padding: 20px 0;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            0% { transform: rotate(45deg) translate(-30%, -30%); }
-            100% { transform: rotate(45deg) translate(30%, 30%); }
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 1;
+            text-align: center;
+            padding: 40px 0 20px;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo span {
-            margin-left: 10px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 60px 0 40px;
-            background: linear-gradient(135deg, rgba(253, 29, 29, 0.05), rgba(64, 93, 230, 0.05));
-        }
-
-        .hero h1 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--tertiary));
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: gradient 5s ease infinite;
+            margin-bottom: 10px;
+            animation: gradientShift 8s ease infinite;
             background-size: 200% 200%;
         }
 
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .hero p {
+        .tagline {
             font-size: 1.1rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 30px;
+            color: #666;
+            margin-bottom: 30px;
         }
 
-        .upload-container {
-            background-color: white;
-            border-radius: 10px;
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: 15px;
             padding: 30px;
             box-shadow: var(--shadow);
-            max-width: 800px;
-            margin: 0 auto;
             transition: var(--transition);
-        }
-
-        .upload-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .upload-area {
-            border: 2px dashed #ddd;
-            border-radius: 8px;
-            padding: 40px 20px;
             text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             position: relative;
             overflow: hidden;
+            z-index: 1;
         }
 
-        .upload-area:hover {
-            border-color: var(--primary);
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
-        .upload-area.active {
-            border-color: var(--secondary);
-            background-color: rgba(131, 58, 180, 0.05);
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+            animation: gradientShift 8s ease infinite;
+            background-size: 200% 200%;
         }
 
-        .upload-area i {
-            font-size: 48px;
-            color: var(--tertiary);
+        .tool-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(0, 176, 155, 0.1), rgba(150, 201, 61, 0.1));
+            color: var(--gradient-start);
+            font-size: 2rem;
+        }
+
+        .tool-title {
+            font-size: 1.5rem;
+            font-weight: 600;
             margin-bottom: 15px;
-            display: inline-block;
-            transition: var(--transition);
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        .upload-area:hover i {
-            transform: scale(1.1);
-            color: var(--primary);
-        }
-
-        .upload-area h3 {
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        .upload-area p {
-            color: var(--gray);
-            margin-bottom: 15px;
+        .tool-description {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
         }
 
         .btn {
             display: inline-block;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 12px 24px;
+            padding: 12px 30px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
+            transition: var(--transition);
             border: none;
             cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(253, 29, 29, 0.3);
+            font-size: 1rem;
             position: relative;
             overflow: hidden;
+            z-index: 1;
         }
 
-        .btn:hover {
+        .btn-primary {
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-blue));
+            color: var(--light-text);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(253, 29, 29, 0.4);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .btn:active {
-            transform: translateY(1px);
-        }
-
-        .btn::after {
+        .btn-primary::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, var(--tertiary), var(--secondary));
+            background: linear-gradient(45deg, var(--gradient-blue), var(--gradient-start));
+            z-index: -1;
             opacity: 0;
             transition: var(--transition);
-            z-index: -1;
         }
 
-        .btn:hover::after {
+        .btn-primary:hover::before {
             opacity: 1;
         }
 
-        .btn-secondary {
-            background: white;
-            color: var(--dark);
-            border: 1px solid #ddd;
-            box-shadow: none;
-        }
-
-        .btn-secondary:hover {
-            background: #f8f9fa;
-            box-shadow: none;
-        }
-
-        #fileInput {
-            display: none;
-        }
-
-        .preview-container {
-            display: none;
-            margin-top: 30px;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .preview-title {
+        footer {
             text-align: center;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        .preview-columns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .preview-box {
-            flex: 1;
-            min-width: 300px;
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-
-        .preview-box h3 {
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        .image-preview {
-            width: 100%;
-            height: auto;
-            max-height: 300px;
-            object-fit: contain;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            background-color: #f8f9fa;
-            background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee),
-                              linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
-        }
-
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(64, 93, 230, 0.2);
-            border-radius: 50%;
-            border-top-color: var(--tertiary);
-            animation: spin 1s linear infinite;
-            margin: 0 auto 15px;
-        }
-
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-
-        .features {
-            padding: 60px 0;
-            background-color: white;
+            padding: 30px 0;
+            margin-top: auto;
+            color: #666;
+            font-size: 0.9rem;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            color: var(--dark);
+            margin: 40px 0 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-color);
         }
 
-        .features-grid {
+        .features-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin: 40px 0;
         }
 
         .feature-card {
-            background-color: var(--light);
-            border-radius: 10px;
+            background: var(--card-bg);
+            border-radius: 15px;
             padding: 30px;
-            text-align: center;
+            box-shadow: var(--shadow);
             transition: var(--transition);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
         }
 
         .feature-icon {
-            font-size: 40px;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: var(--gradient-start);
         }
 
-        .feature-card h3 {
+        .feature-title {
+            font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--dark);
+            color: var(--gradient-blue);
         }
 
-        .feature-card p {
-            color: var(--gray);
+        .feature-description {
+            color: #666;
+            font-size: 0.95rem;
         }
 
-        /* Learn More Section */
-        .learn-more {
-            padding: 60px 0;
-            background-color: #f8f9fa;
-        }
-
-        .learn-more-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 10px;
-            padding: 40px;
-            box-shadow: var(--shadow);
-        }
-
-        .learn-more h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--dark);
-        }
-
-        .learn-more h3 {
-            margin: 25px 0 15px;
-            color: var(--dark);
-        }
-
-        .learn-more p {
-            margin-bottom: 15px;
-            color: var(--gray);
-            line-height: 1.7;
-        }
-
-        .learn-more ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .learn-more li {
-            margin-bottom: 10px;
-            color: var(--gray);
-        }
-
-        .toggle-learn-more {
-            display: block;
-            text-align: center;
-            margin: 30px auto;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .toggle-learn-more:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background: linear-gradient(45deg, var(--dark), #343a40);
-            color: white;
-            padding: 40px 0 20px;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .footer-column h3 {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: #adb5bd;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-column ul li a:hover {
-            color: white;
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #adb5bd;
-            font-size: 0.9rem;
-        }
-
-        /* Ad Container Styles */
         .ad-container {
-            margin: 30px auto;
-            text-align: center;
-            padding: 15px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-
-        /* Install Prompt */
-        .install-prompt {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            display: none;
-            max-width: 300px;
-            animation: slideUp 0.5s ease;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .install-prompt p {
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        .install-prompt-buttons {
+            width: 100%;
+            margin: 20px 0;
             display: flex;
-            gap: 10px;
+            justify-content: center;
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
         }
 
-        .install-prompt .btn {
-            padding: 8px 15px;
-            font-size: 0.9rem;
+        .ad-container.desktop {
+            min-height: 90px;
         }
 
-        .close-prompt {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            color: var(--gray);
+        .ad-container.mobile {
+            min-height: 50px;
+            display: none;
         }
 
-        /* Mobile styles */
+        .social-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul {
-                margin-top: 20px;
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 0 10px;
-            }
-
-            .hero h1 {
+            .logo {
                 font-size: 2rem;
             }
-
-            .preview-columns {
-                flex-direction: column;
+            
+            .tools-container, .features-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .tool-card, .feature-card {
+                padding: 25px;
             }
 
-            .preview-box {
-                min-width: 100%;
+            .ad-container.desktop {
+                display: none;
             }
 
-            .action-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-
-            .footer-content {
-                flex-direction: column;
-            }
-
-            .learn-more-content {
-                padding: 20px;
-            }
-
-            .install-prompt {
-                left: 20px;
-                right: 20px;
-                max-width: none;
+            .ad-container.mobile {
+                display: flex;
             }
         }
 
-        /* Confetti effect */
-        .confetti {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            background-color: var(--primary);
-            opacity: 0;
-            animation: confetti 3s ease-out;
-            z-index: 1000;
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
         }
 
-        @keyframes confetti {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        .fadeIn {
+            animation-name: fadeIn;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .bounce {
+            animation-name: bounce;
+            transform-origin: center bottom;
+        }
+
+        @keyframes bounce {
+            from, 20%, 53%, 80%, to {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+                transform: translate3d(0,0,0);
+            }
+            40%, 43% {
+                animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+                transform: translate3d(0, -30px, 0);
+            }
+            70% {
+                animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+                transform: translate3d(0, -15px, 0);
+            }
+            90% {
+                transform: translate3d(0,-4px,0);
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <i class="fas fa-cut"></i>
-                <span>Remove Easy</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Remove Background from Images Instantly</h1>
-            <p>Upload your photo and let our AI remove the background automatically. Fast, free, and no signup required!</p>
-           
-            <div class="upload-container">
-                <div class="upload-area" id="uploadArea">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <h3>Upload Your Image</h3>
-                    <p>Drag & drop your image here or click to browse</p>
-                    <button class="btn">Select Image</button>
-                    <input type="file" id="fileInput" accept="image/*">
-                </div>
-                <p class="text-center" style="color: var(--gray); font-size: 0.9rem;">
-                    Supported formats: JPG, PNG, WEBP (Max 5MB)
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 728x90 Banner Ad -->
-    <div class="ad-container">
-        <script type="text/javascript">
-            atOptions = {
-                'key': '42907d31c7191ae2f30cb88f42ba9fe7',
-                'format': 'iframe',
-                'height': 90,
-                'width': 728,
-                'params': {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/42907d31c7191ae2f30cb88f42ba9fe7/invoke.js"></script>
-    </div>
-
     <div class="container">
-        <div class="loading" id="loadingIndicator">
-            <div class="spinner"></div>
-            <p>Removing background... This may take a few seconds</p>
-        </div>
+        <header class="animated fadeIn">
+            <h1 class="logo">AI Tools</h1>
+            <p class="tagline">Powerful tools to simplify your digital life</p>
+        </header>
 
-        <div class="preview-container" id="previewContainer">
-            <h2 class="preview-title">Your Background-Free Image</h2>
-            <div class="preview-columns">
-                <div class="preview-box">
-                    <h3>Original Image</h3>
-                    <img id="originalImage" class="image-preview" src="" alt="Original image">
+        <h2 class="section-title animated fadeIn">Use Tools</h2>
+        
+        <div class="tools-container">
+            <!-- URL Shortener Tool -->
+            <div class="tool-card animated fadeIn">
+                <div class="tool-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
                 </div>
-                <div class="preview-box">
-                    <h3>Background Removed</h3>
-                    <img id="processedImage" class="image-preview" src="" alt="Background removed image">
-                </div>
-            </div>
-            <div class="action-buttons">
-                <button class="btn" id="downloadBtn">
-                    <i class="fas fa-download"></i> Save to Gallery
-                </button>
-                <button class="btn btn-secondary" id="newImageBtn">
-                    <i class="fas fa-redo"></i> Process New Image
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Native Banner Ad -->
-    <div class="ad-container">
-        <div id="container-1bd921e4eac7061b2dca891f7d6ed179"></div>
-    </div>
-
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose Remove Easy?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Lightning Fast</h3>
-                    <p>Our AI processes images in seconds, saving you time and effort compared to manual editing.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Privacy Focused</h3>
-                    <p>We automatically delete your images after processing. Your photos never get stored on our servers.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>High Quality</h3>
-                    <p>Get professional-quality results with clean edges and transparent backgrounds every time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Learn More Section -->
-    <section class="learn-more" id="how-it-works" style="display: none;">
-        <div class="container">
-            <div class="learn-more-content">
-                <h2>How Remove Easy Works</h2>
+                <h3 class="tool-title">URL Shortener</h3>
+                <p class="tool-description">Shorten your long URLs into compact, shareable links with just one click.</p>
+                <a href="https://removebg-easymovebg.github.io/Choto-Url/" class="btn btn-primary bounce">Use Tool</a>
                 
-                <h3>Advanced AI Technology</h3>
-                <p>Our background removal tool uses cutting-edge artificial intelligence to automatically detect and separate foreground objects from their backgrounds. The AI has been trained on millions of images to accurately identify subjects like people, products, animals, and more.</p>
+                <!-- Banner Ad 720x90 -->
+                <div class="ad-container desktop">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '42907d31c7191ae2f30cb88f42ba9fe7',
+                            'format' : 'iframe',
+                            'height' : 90,
+                            'width' : 728,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//www.highperformanceformat.com/42907d31c7191ae2f30cb88f42ba9fe7/invoke.js"></script>
+                </div>
                 
-                <h3>Simple 3-Step Process</h3>
-                <ol>
-                    <li><strong>Upload:</strong> Select or drag & drop your image (JPG, PNG, or WEBP format)</li>
-                    <li><strong>Process:</strong> Our AI analyzes and removes the background automatically</li>
-                    <li><strong>Download:</strong> Save your image with transparent background in high quality</li>
-                </ol>
-                
-                <h3>Perfect For</h3>
-                <ul>
-                    <li>E-commerce product images</li>
-                    <li>Social media profile pictures</li>
-                    <li>Marketing materials and advertisements</li>
-                    <li>Photo editing and creative projects</li>
-                    <li>School or work presentations</li>
-                </ul>
-                
-                <h3>Tips for Best Results</h3>
-                <p>For optimal background removal:</p>
-                <ul>
-                    <li>Use high-contrast images where the subject stands out from the background</li>
-                    <li>Avoid complex backgrounds with patterns similar to the foreground</li>
-                    <li>For product photos, use solid color backgrounds when possible</li>
-                    <li>Ensure good lighting to minimize shadows</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <a href="#how-it-works" class="toggle-learn-more" id="learnMoreToggle">Learn More About How It Works</a>
-
-    <!-- 300x250 Banner Ad -->
-    <div class="ad-container">
-        <script type="text/javascript">
-            atOptions = {
-                'key': '9c326b725db5737797219fb389f934d0',
-                'format': 'iframe',
-                'height': 250,
-                'width': 300,
-                'params': {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/9c326b725db5737797219fb389f934d0/invoke.js"></script>
-    </div>
-
-    <footer id="about">
-        <div class="container">
-            <!-- 320x50 Mobile Banner Ad -->
-            <div class="ad-container">
-                <script type="text/javascript">
-                    atOptions = {
-                        'key': '2304ba093d30763a388f85a38bf67876',
-                        'format': 'iframe',
-                        'height': 50,
-                        'width': 320,
-                        'params': {}
-                    };
-                </script>
-                <script type="text/javascript" src="//www.highperformanceformat.com/2304ba093d30763a388f85a38bf67876/invoke.js"></script>
+                <!-- Banner Ad 320x50 -->
+                <div class="ad-container mobile">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '2304ba093d30763a388f85a38bf67876',
+                            'format' : 'iframe',
+                            'height' : 50,
+                            'width' : 320,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//www.highperformanceformat.com/2304ba093d30763a388f85a38bf67876/invoke.js"></script>
+                </div>
             </div>
             
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Remove Easy</h3>
-                    <p>The easiest way to remove backgrounds from your images automatically and for free.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
+            <!-- Background Remover Tool -->
+            <div class="tool-card animated fadeIn" style="animation-delay: 0.2s;">
+                <div class="tool-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                        <line x1="7" y1="2" x2="7" y2="22"></line>
+                        <line x1="17" y1="2" x2="17" y2="22"></line>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <line x1="2" y1="7" x2="7" y2="7"></line>
+                        <line x1="2" y1="17" x2="7" y2="17"></line>
+                        <line x1="17" y1="17" x2="22" y2="17"></line>
+                        <line x1="17" y1="7" x2="22" y2="7"></line>
+                    </svg>
                 </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#about">About</a></li>
-                    </ul>
+                <h3 class="tool-title">Background Remover</h3>
+                <p class="tool-description">Remove backgrounds from your images automatically with AI-powered technology.</p>
+                <a href="https://removebg-easymovebg.github.io/Bg-Remove/" class="btn btn-primary bounce" style="animation-delay: 0.3s;">Use Tool</a>
+                
+                <!-- Banner Ad 720x90 -->
+                <div class="ad-container desktop">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '42907d31c7191ae2f30cb88f42ba9fe7',
+                            'format' : 'iframe',
+                            'height' : 90,
+                            'width' : 728,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//www.highperformanceformat.com/42907d31c7191ae2f30cb88f42ba9fe7/invoke.js"></script>
                 </div>
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                
+                <!-- Banner Ad 320x50 -->
+                <div class="ad-container mobile">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '2304ba093d30763a388f85a38bf67876',
+                            'format' : 'iframe',
+                            'height' : 50,
+                            'width' : 320,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//www.highperformanceformat.com/2304ba093d30763a388f85a38bf67876/invoke.js"></script>
                 </div>
-            </div>
-            <div class="copyright">
-                <p>© <span id="currentYear"></span> Remove Easy. All rights reserved.</p>
             </div>
         </div>
+
+        <!-- Features Section -->
+        <h2 class="section-title animated fadeIn" style="animation-delay: 0.3s;">Features</h2>
+        
+        <div class="features-container">
+            <div class="feature-card animated fadeIn" style="animation-delay: 0.4s;">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3 class="feature-title">How It Works</h3>
+                <p class="feature-description">Our tools use advanced AI technology to provide quick and accurate results. Simply upload your content and let our algorithms do the work for you.</p>
+            </div>
+            
+            <div class="feature-card animated fadeIn" style="animation-delay: 0.5s;">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">About Us</h3>
+                <p class="feature-description">We're a team of developers creating free tools to make your digital life easier. Our mission is to provide high-quality services without any cost.</p>
+            </div>
+            
+            <div class="feature-card animated fadeIn" style="animation-delay: 0.6s;">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Learn More</h3>
+                <p class="feature-description">Discover tips and tricks for using our tools effectively. Check out our tutorials and guides to get the most out of our services.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Bar -->
+    <div class="social-bar">
+        <script type='text/javascript' src='//pl26716656.profitableratecpm.com/a4/f5/09/a4f5094874337c2c6ef04ce168dbcc0f.js'></script>
+    </div>
+
+    <footer class="animated fadeIn" style="animation-delay: 0.7s;">
+        <p>&copy; 2023 AI Tools. All rights reserved.</p>
     </footer>
 
-    <!-- Install Prompt -->
-    <div class="install-prompt" id="installPrompt">
-        <button class="close-prompt" id="closePrompt">&times;</button>
-        <p>Install Remove Easy on your device for quick access and offline use!</p>
-        <div class="install-prompt-buttons">
-            <button class="btn" id="installBtn">Install Now</button>
-            <button class="btn btn-secondary" id="laterBtn">Maybe Later</button>
-        </div>
-    </div>
-
-    <!-- Manifest File -->
     <script>
-        // Create manifest dynamically
-        const manifest = {
-            "name": "Remove Easy",
-            "short_name": "RemoveEasy",
-            "description": "Remove image backgrounds instantly with AI",
-            "start_url": "/",
-            "display": "standalone",
-            "background_color": "#f8f9fa",
-            "theme_color": "#FD1D1D",
-            "icons": [
-                {
-                    "src": "icons/icon-192x192.png",
-                    "sizes": "192x192",
-                    "type": "image/png"
-                },
-                {
-                    "src": "icons/icon-512x512.png",
-                    "sizes": "512x512",
-                    "type": "image/png"
-                }
-            ]
-        };
-
-        // Create blob and URL for manifest
-        const blob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
-        const manifestURL = URL.createObjectURL(blob);
-        
-        // Create link element for manifest
-        const link = document.createElement('link');
-        link.rel = 'manifest';
-        link.href = manifestURL;
-        document.head.appendChild(link);
-    </script>
-
-    <script>
+        // Add animation classes on scroll
         document.addEventListener('DOMContentLoaded', function() {
-            // Set current year in footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-           
-            // File upload handling
-            const uploadArea = document.getElementById('uploadArea');
-            const fileInput = document.getElementById('fileInput');
-            const previewContainer = document.getElementById('previewContainer');
-            const loadingIndicator = document.getElementById('loadingIndicator');
-            const originalImage = document.getElementById('originalImage');
-            const processedImage = document.getElementById('processedImage');
-            const downloadBtn = document.getElementById('downloadBtn');
-            const newImageBtn = document.getElementById('newImageBtn');
-            const learnMoreToggle = document.getElementById('learnMoreToggle');
-            const learnMoreSection = document.querySelector('.learn-more');
-            const installPrompt = document.getElementById('installPrompt');
-            const installBtn = document.getElementById('installBtn');
-            const laterBtn = document.getElementById('laterBtn');
-            const closePrompt = document.getElementById('closePrompt');
+            const animatedElements = document.querySelectorAll('.animated');
             
-            let deferredPrompt;
-
-            // Learn More toggle
-            learnMoreToggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                if (learnMoreSection.style.display === 'none' || !learnMoreSection.style.display) {
-                    learnMoreSection.style.display = 'block';
-                    learnMoreToggle.textContent = 'Hide Details';
-                    learnMoreSection.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    learnMoreSection.style.display = 'none';
-                    learnMoreToggle.textContent = 'Learn More About How It Works';
-                }
-            });
-
-            // Handle drag and drop
-            uploadArea.addEventListener('click', () => fileInput.click());
-           
-            uploadArea.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                uploadArea.classList.add('active');
-            });
-           
-            uploadArea.addEventListener('dragleave', () => {
-                uploadArea.classList.remove('active');
-            });
-           
-            uploadArea.addEventListener('drop', (e) => {
-                e.preventDefault();
-                uploadArea.classList.remove('active');
-                if (e.dataTransfer.files.length) {
-                    fileInput.files = e.dataTransfer.files;
-                    handleFileUpload(e.dataTransfer.files[0]);
-                }
-            });
-           
-            fileInput.addEventListener('change', () => {
-                if (fileInput.files.length) {
-                    handleFileUpload(fileInput.files[0]);
-                }
-            });
-
-            // Remove.bg API Integration (50 free requests/month)
-            async function removeBackgroundWithAPI(imageFile) {
-                const API_KEY = 'Fqsgcyr5e8h1GkCZgVCwzLS6'; // Your provided API key
-                const formData = new FormData();
-                formData.append('image_file', imageFile);
-                formData.append('size', 'auto');
-               
-                try {
-                    const response = await fetch('https://api.remove.bg/v1.0/removebg', {
-                        method: 'POST',
-                        headers: {
-                            'X-Api-Key': API_KEY
-                        },
-                        body: formData
-                    });
-                   
-                    if (!response.ok) {
-                        throw new Error('API request failed');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.visibility = 'visible';
+                        entry.target.classList.add(entry.target.dataset.animation);
+                        observer.unobserve(entry.target);
                     }
-                   
-                    return await response.blob();
-                } catch (error) {
-                    console.error('API Error:', error);
-                    throw error;
-                }
-            }
-
-            // Advanced client-side background removal
-            async function removeBackgroundClientSide(imageData) {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.onload = function() {
-                        const canvas = document.createElement('canvas');
-                        canvas.width = img.width;
-                        canvas.height = img.height;
-                        const ctx = canvas.getContext('2d');
-                        ctx.drawImage(img, 0, 0);
-                       
-                        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                        const data = imageData.data;
-                       
-                        // Detect background color from corners
-                        const bgColor = getBackgroundColor(canvas, ctx);
-                        const threshold = 30;
-                       
-                        for (let i = 0; i < data.length; i += 4) {
-                            const r = data[i];
-                            const g = data[i + 1];
-                            const b = data[i + 2];
-                           
-                            // Check if pixel is similar to background
-                            if (colorDistance(r, g, b, bgColor.r, bgColor.g, bgColor.b) < threshold) {
-                                data[i + 3] = 0; // Set alpha to transparent
-                            }
-                        }
-                       
-                        ctx.putImageData(imageData, 0, 0);
-                        resolve(canvas.toDataURL());
-                    };
-                    img.src = imageData;
                 });
-            }
+            }, {
+                threshold: 0.1
+            });
 
-            function getBackgroundColor(canvas, ctx) {
-                // Sample corners to determine background color
-                const corners = [
-                    [0, 0], [canvas.width-1, 0],
-                    [0, canvas.height-1], [canvas.width-1, canvas.height-1]
-                ];
-               
-                let r = 0, g = 0, b = 0;
-               
-                corners.forEach(pos => {
-                    const pixel = ctx.getImageData(pos[0], pos[1], 1, 1).data;
-                    r += pixel[0];
-                    g += pixel[1];
-                    b += pixel[2];
+            animatedElements.forEach(element => {
+                element.style.visibility = 'hidden';
+                observer.observe(element);
+            });
+
+            // Add hover effect to cards
+            const cards = document.querySelectorAll('.tool-card, .feature-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = this.classList.contains('tool-card') ? 'translateY(-10px)' : 'translateY(-5px)';
                 });
-               
-                return {
-                    r: Math.round(r / corners.length),
-                    g: Math.round(g / corners.length),
-                    b: Math.round(b / corners.length)
-                };
-            }
-
-            function colorDistance(r1, g1, b1, r2, g2, b2) {
-                // Calculate Euclidean distance between colors
-                const dr = r1 - r2;
-                const dg = g1 - g2;
-                const db = b1 - b2;
-                return Math.sqrt(dr*dr + dg*dg + db*db);
-            }
-
-            async function handleFileUpload(file) {
-                // Check file type and size
-                const validTypes = ['image/jpeg', 'image/png', 'image/webp'];
-                const maxSize = 5 * 1024 * 1024; // 5MB
-               
-                if (!validTypes.includes(file.type)) {
-                    alert('Please upload a valid image file (JPEG, PNG, or WEBP)');
-                    return;
-                }
-               
-                if (file.size > maxSize) {
-                    alert('File size exceeds 5MB limit. Please choose a smaller image.');
-                    return;
-                }
-               
-                // Show loading indicator
-                loadingIndicator.style.display = 'block';
-               
-                // Display original image
-                const reader = new FileReader();
-                reader.onload = async function(e) {
-                    originalImage.src = e.target.result;
-                   
-                    try {
-                        // First try with Remove.bg API
-                        const blob = await removeBackgroundWithAPI(file);
-                        const processedUrl = URL.createObjectURL(blob);
-                        processedImage.src = processedUrl;
-                    } catch (apiError) {
-                        console.log('API failed, trying client-side solution');
-                        // If API fails, try client-side solution
-                        const processedData = await removeBackgroundClientSide(e.target.result);
-                        processedImage.src = processedData;
-                    }
-                   
-                    // Hide loading, show results
-                    loadingIndicator.style.display = 'none';
-                    previewContainer.style.display = 'block';
-                    previewContainer.scrollIntoView({ behavior: 'smooth' });
-                    createConfetti();
-                };
-                reader.readAsDataURL(file);
-            }
-           
-            // Download button - Save to device gallery
-            downloadBtn.addEventListener('click', async () => {
-                if (!processedImage.src) return;
-               
-                try {
-                    // Create a blob from the image data
-                    const response = await fetch(processedImage.src);
-                    const blob = await response.blob();
-                    
-                    // Create object URL
-                    const objectUrl = URL.createObjectURL(blob);
-                    
-                    // Create a temporary anchor element
-                    const a = document.createElement('a');
-                    a.href = objectUrl;
-                    a.download = 'background-removed-' + Date.now() + '.png';
-                    a.style.display = 'none';
-                    document.body.appendChild(a);
-                    
-                    // Trigger the download
-                    a.click();
-                    
-                    // Clean up
-                    setTimeout(() => {
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(objectUrl);
-                    }, 100);
-                    
-                    // Show success message
-                    alert('Image saved to your device gallery!');
-                    createConfetti();
-                } catch (error) {
-                    console.error('Error saving image:', error);
-                    alert('Could not save image. Please try again.');
-                }
-            });
-           
-            // New image button
-            newImageBtn.addEventListener('click', () => {
-                previewContainer.style.display = 'none';
-                fileInput.value = '';
-                originalImage.src = '';
-                processedImage.src = '';
-            });
-           
-            // Create confetti effect
-            function createConfetti() {
-                const colors = ['#FD1D1D', '#833AB4', '#405DE6', '#FFDC80', '#FCAF45'];
-               
-                for (let i = 0; i < 100; i++) {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    confetti.style.left = Math.random() * 100 + 'vw';
-                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                    confetti.style.width = Math.random() * 10 + 5 + 'px';
-                    confetti.style.height = Math.random() * 10 + 5 + 'px';
-                    confetti.style.animationDuration = Math.random() * 2 + 2 + 's';
-                    document.body.appendChild(confetti);
-                   
-                    // Remove confetti after animation
-                    setTimeout(() => {
-                        confetti.remove();
-                    }, 3000);
-                }
-            }
-
-            // PWA Installation
-            window.addEventListener('beforeinstallprompt', (e) => {
-                // Prevent the mini-infobar from appearing on mobile
-                e.preventDefault();
-                // Stash the event so it can be triggered later
-                deferredPrompt = e;
-                // Show the install prompt
-                setTimeout(() => {
-                    installPrompt.style.display = 'block';
-                }, 5000);
-            });
-
-            installBtn.addEventListener('click', async () => {
-                if (deferredPrompt) {
-                    // Show the install prompt
-                    deferredPrompt.prompt();
-                    // Wait for the user to respond to the prompt
-                    const { outcome } = await deferredPrompt.userChoice;
-                    // Optionally, send analytics event with outcome of user choice
-                    console.log(`User response to the install prompt: ${outcome}`);
-                    // We've used the prompt, and can't use it again, throw it away
-                    deferredPrompt = null;
-                    // Hide the install prompt
-                    installPrompt.style.display = 'none';
-                }
-            });
-
-            laterBtn.addEventListener('click', () => {
-                installPrompt.style.display = 'none';
-            });
-
-            closePrompt.addEventListener('click', () => {
-                installPrompt.style.display = 'none';
-            });
-
-            // Check if app is running in standalone mode
-            if (window.matchMedia('(display-mode: standalone)').matches) {
-                console.log('Running in standalone mode');
-                // You can add standalone-specific code here
-            }
-
-            // Register service worker for PWA
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('sw.js').then(registration => {
-                        console.log('ServiceWorker registration successful');
-                    }).catch(err => {
-                        console.log('ServiceWorker registration failed: ', err);
-                    });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
                 });
-            }
-        });
-    </script>
-
-    <!-- Service Worker Script -->
-    <script>
-        // This would normally be in a separate sw.js file
-        const CACHE_NAME = 'remove-easy-v1';
-        const ASSETS_TO_CACHE = [
-            '/',
-            '/index.html',
-            '/styles.css',
-            '/app.js',
-            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css',
-            'icons/icon-192x192.png',
-            'icons/icon-512x512.png'
-        ];
-
-        self.addEventListener('install', (event) => {
-            event.waitUntil(
-                caches.open(CACHE_NAME)
-                    .then((cache) => {
-                        return cache.addAll(ASSETS_TO_CACHE);
-                    })
-            );
+            });
         });
 
-        self.addEventListener('fetch', (event) => {
-            event.respondWith(
-                caches.match(event.request)
-                    .then((response) => {
-                        return response || fetch(event.request);
-                    })
-            );
-        });
+        // Service worker registration for PWA (optional)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful');
+                }).catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
     </script>
 </body>
 </html>
